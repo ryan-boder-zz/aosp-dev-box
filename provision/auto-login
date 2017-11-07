@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# https://askubuntu.com/questions/771837/how-to-create-ubuntu-server-16-04-autologin
+mkdir -p /etc/systemd/system/getty\@tty1.service.d
+echo "[Service]" >> /etc/systemd/system/getty\@tty1.service.d/override.conf
+echo "ExecStart=" >> /etc/systemd/system/getty\@tty1.service.d/override.conf
+echo "ExecStart=-/sbin/agetty -a vagrant --noclear %I $TERM" >> /etc/systemd/system/getty\@tty1.service.d/override.conf
+systemctl daemon-reload
+systemctl restart getty@tty1

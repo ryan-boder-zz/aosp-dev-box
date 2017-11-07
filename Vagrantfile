@@ -13,5 +13,6 @@ Vagrant.configure("2") do |config|
     apt-get update
     cd /vagrant/provision
     ./install-packages
+    ./auto-login
   SHELL
 end
