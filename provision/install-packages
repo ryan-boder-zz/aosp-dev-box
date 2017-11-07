@@ -1,0 +1,4 @@
+#!/bin/bash
+
+apt-get install -y xfce4 wget git unzip make gcc bc liblz4-tool emacs
+apt-get install -y linux-headers-generic linux-headers-`uname -r`

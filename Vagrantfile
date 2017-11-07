@@ -11,5 +11,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision "shell", inline: <<-SHELL
     apt-get update
+    cd /vagrant/provision
+    ./install-packages
   SHELL
 end
