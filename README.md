@@ -17,6 +17,22 @@ brew cask install virtualbox-extension-pack
 brew cask install vagrant
 ```
 
+## Vagrant Usage
+
+To build the VM do
+
+```
+vagrant up
+```
+
+Use the VM GUI or ssh in with
+
+```
+vagrant ssh
+```
+
+See the [Vagrant Command-Line Interface docs](https://www.vagrantup.com/docs/cli) for more information.
+
 ## VirtualBox Guest Additions
 
 Guest Additions are needed to have a good experience using the VM GUI. There are multiple ways to install Guest Additions.
@@ -44,3 +60,9 @@ wget https://www.virtualbox.org/download/testcase/VBoxGuestAdditions_5.2.1-11891
 ### Manually
 
 In your VM menu choose Devices -> Insert Guest Additions CD image
+
+## Tools
+
+### Android NDK
+
+The [Android NDK](https://developer.android.com/ndk/index.html) contains all the tools needs to build the Android Linux kernel and native code. It is installed in /opt/android/ndk.
