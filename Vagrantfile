@@ -10,9 +10,10 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.provision "shell", inline: <<-SHELL
-    apt-get update
     cd /vagrant/provision
+    apt-get update
     ./install-packages
+    ./auto-gui
     ./auto-login
   SHELL
 end
