@@ -1,0 +1,12 @@
+#!/bin/bash
+
+cd /vagrant/share
+
+if [ -f VBoxGuestAdditions.iso ]; then
+    echo "Installing VirtualBox Guest Editions"
+    mount VBoxGuestAdditions.iso /mnt
+    cd /mnt
+    ./VBoxLinuxAdditions.run
+else
+    echo "share/VBoxGuestAdditions.iso not found. Please install with vagrant plugin or manually."
+fi

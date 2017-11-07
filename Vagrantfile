@@ -14,6 +14,7 @@ Vagrant.configure("2") do |config|
     apt-get update
     ./install-packages
     ./android-ndk
+    ./guest-additions
     ./auto-gui
     ./auto-login
   SHELL
