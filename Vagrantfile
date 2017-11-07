@@ -13,6 +13,7 @@ Vagrant.configure("2") do |config|
     cd /vagrant/provision
     apt-get update
     ./install-packages
+    ./android-ndk
     ./auto-gui
     ./auto-login
   SHELL
